@@ -1,0 +1,5 @@
+node_modules
+
+# Compiled files
+build/*
+!build/index.html
