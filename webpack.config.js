@@ -1,4 +1,5 @@
 const path = require('path')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: './src',
@@ -6,6 +7,7 @@ module.exports = {
     path: path.resolve(__dirname, './build'),
     filename: 'index.js'
   },
+  plugins: [new MiniCssExtractPlugin({ filename: 'index.css' })],
 
   resolve: {
     // Indicates that stuff like "import App from './App'" can just add the following extensions to find the file.
@@ -25,7 +27,7 @@ module.exports = {
       // Scss Loaders
       {
         test: /\.(s(a|c)ss)$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
       }
     ]
   },
