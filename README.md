@@ -1,5 +1,5 @@
 # TypeScript React App Boilerplate
-I got tired of using create-react-app because of how much stuff I end up not needing, so I went and figured out to just make a barebones TypeScript React app that doesn't have anything but React and Typescript.
+I got tired of using create-react-app because of how much stuff I end up not needing, so I went and figured out to just make a barebones TypeScript React app that doesn't have anything but React and Typescript (Also Sass too because who doesn't like sass?).
 
 Theroetically this should work by running `npm i` and then `npm start`.
 

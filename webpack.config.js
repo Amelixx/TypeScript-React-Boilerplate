@@ -16,13 +16,18 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(ts)x?$/,
+        test: /\.tsx?$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
         },
+      },
+      // Scss Loaders
+      {
+        test: /\.(s(a|c)ss)$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
       }
-    ] 
+    ]
   },
 
   devServer: {
